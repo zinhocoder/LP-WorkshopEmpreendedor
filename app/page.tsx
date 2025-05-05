@@ -26,13 +26,13 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <div className="flex flex-col md:flex-row items-start justify-between">
             {/* Lado esquerdo - Logo e textos */}
-            <div className="md:w-3/5 space-y- mb-10 md:mb-0 md:p1-0 md:pr-8">
+            <div className="md:w-3/5 space-y- mb-0 md:mb-0 md:p1-0 md:pr-0">
               <div className="flex justify-center md:justify-start">
                 <Image
                   src="/logogerson.png"
                   alt="Logo Workshop Só Para Empreendedores"
-                  width={280}
-                  height={90}
+                  width={300}
+                  height={300}
                   className="transform transition-all duration-700 ease-in-out"
                   style={{
                     transform: isVisible ? "scale(1)" : "scale(0.8)",
@@ -53,7 +53,7 @@ export default function Home() {
                 <div className="space-y-2">
                   {[
                     "Workshop com 5 horas de conteúdo prático",
-                    "Gestão de pessoas, estratégica, comercial e financeira",
+                    "Gestão de pessoas, estratégica, comercial, financeira e emocional",
                     "Material de apoio exclusivo",
                     "Certificado de participação",
                   ].map((item, index) => (
@@ -242,42 +242,45 @@ export default function Home() {
 
       {/* BLOCO 03 - Quem Vai Conduzir */}
       <section className="w-full bg-black text-white py-8 md:py-16 relative overflow-hidden">
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8">
-            <div className="w-full md:w-1/2 order-1">
-              <div className="border-l-4 border-red-500 pl-6 mb-6">
-                <h2 className="text-3xl md:text-4xl font-bold mb-2">
-                  Quem é <span className="text-red-500">Gerson Rodrigues</span>?
-                </h2>
-              </div>
-
-              <div className="space-y-4 text-lg">
-                <p>Empresário, sócio do Grupo Desafio, autor do livro Seja Livre e treinador de empresários.</p>
-                <p>É especialista em gestão e vendas, com foco em lucro real e autonomia.</p>
-                <p>
-                  Já ajudou mais de 15 mil empresários a organizarem seus negócios, aumentarem seus lucros e
-                  conquistarem liberdade fora da operação.
-                </p>
-              </div>
-            </div>
-
-            <div className="hidden md:flex md:w-1/2 order-2 items-end justify-end h-full">
-              <div className="relative w-full h-[500px] md:h-[600px] overflow-visible">
-                {/* Efeito de destaque para a imagem */}
-                <div className="absolute -bottom-5 -right-5 w-[90%] h-[90%] bg-gradient-to-tr from-red-600/30 to-orange-500/20 rounded-full blur-3xl z-0"></div>
-                <div className="absolute -top-10 -left-10 w-[60%] h-[60%] bg-gradient-to-bl from-purple-600/20 to-blue-500/10 rounded-full blur-3xl z-0"></div>
-
-                <Image
-                  src="/gerson-chair.jpg"
-                  alt="Gerson Rodrigues"
-                  fill
-                  className="object-contain object-bottom z-10 relative"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
+  <div className="container mx-auto px-4 md:px-8 relative z-10">
+    <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+      {/* Texto */}
+      <div className="w-full md:w-1/2 order-2 md:order-1">
+        <div className="border-l-4 border-red-500 pl-6 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2">
+            Quem é <span className="text-orange-500">Gerson Rodrigues</span>?
+          </h2>
         </div>
+
+        <div className="space-y-4 text-lg">
+          <p>Empresário, sócio do Grupo Desafio, autor do livro Seja Livre e treinador de empresários.</p>
+          <p>É especialista em gestão e vendas, com foco em lucro real e autonomia.</p>
+          <p>
+            Já ajudou mais de 15 mil empresários a organizarem seus negócios, aumentarem seus lucros e
+            conquistarem liberdade fora da operação.
+          </p>
+        </div>
+      </div>
+
+      {/* Imagem */}
+      <div className="w-full md:w-1/2 order-1 md:order-2 flex items-center justify-center h-auto">
+        <div className="relative w-full max-w-md h-[400px] md:h-[600px]">
+          {/* Efeitos de luz de fundo */}
+          <div className="absolute -bottom-5 -right-5 w-[90%] h-[90%] bg-gradient-to-tr from-red-600/30 to-orange-500/20 rounded-full blur-3xl z-0"></div>
+          <div className="absolute -top-10 -left-10 w-[60%] h-[60%] bg-gradient-to-bl from-purple-600/20 to-blue-500/10 rounded-full blur-3xl z-0"></div>
+
+          <Image
+            src="/gerson-chair.jpg"
+            alt="Gerson Rodrigues"
+            fill
+            className="object-contain object-bottom z-10 relative"
+            priority
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
 
         {/* Elementos decorativos */}
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/80 via-transparent to-black/80 z-0"></div>
@@ -304,7 +307,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-stretch justify-between gap-8 max-w-4xl mx-auto">
             <div className="md:w-1/2 bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 flex flex-col transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(255,165,0,0.2)]">
               <div className="relative mb-6 pb-4 border-b border-gray-600">
-                <div className="absolute -top-2 -left-2 bg-red-600 text-white px-3 py-1 rounded-md text-sm font-bold">
+                <div className="absolute -top-4 -left-2 bg-red-600 text-white px-3 py-1 rounded-md text-sm font-bold">
                   ESGOTADO
                 </div>
                 <p className="text-xl font-medium text-gray-400 line-through mt-4">1º Lote</p>
